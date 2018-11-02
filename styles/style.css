@@ -1,0 +1,39 @@
+header {
+    border: 2px dotted black;
+}
+
+section {
+    border: 2px dotted green;
+}
+
+/* this syntax might look a little confusing but its pretty simple
+this says "if the current browser the user is using is less than
+900px then use/add these styles" */
+@media (max-width: 900px) {
+    body {
+        background-color: pink;
+        color: green;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* now one important thing to remember about cascading stylesheets is the 
+"cascading" part meaning there is an order or precedence that you need
+to follow so you don't overide your styles unintentionally. in this case 
+if you have different styles affecting the same selector(element, class,
+or ID) they take precedent from bottom to top. so if we would have defined
+the 900 media query before 500, 500 would not have worked as it would
+have been overwritten.
+@media (max-width: 900px) {
+    body {
+        background-color: pink;
+        color: green;
+    }
+} */
+
